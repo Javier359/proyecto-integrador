@@ -1,0 +1,228 @@
+/*barra de navegacion*/
+html {
+    height: 100%;
+}
+body { min-height: 100vh; }
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cabecera {
+    background-color: rgb(70, 67, 67);
+}
+.contenedor-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contenedor-cabecera-izquierda {
+    display: flex;
+    align-items: center;
+}
+.contenedor-cabecera-izquierda img {
+    height: 75px;
+}
+.contenedor-cabecera-izquierda p {
+    font-size: 25px;
+    color: white;
+}
+
+.contenedor-cabecera-derecha ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 15px;
+    margin: 0;
+}
+
+/*seccion imagen*/
+.seccion-imagen {
+    height: 700px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagenes_integrador_front/ba1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-imagen-texto {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 500px;
+    margin-right: 10%;
+    margin-top: 20%;
+    direction: rtl;
+    color: white;
+}
+.contenedor-imagen-texto p {
+    color: white;
+}
+.botones-imagen {
+    float: right;
+    direction: ltr;
+}
+/*seccion oradores*/
+.titulo-oradores h3 {
+    color: rgb(54, 54, 54);
+    font-size: 19px;
+}
+.imagen-oradores {
+    width: 300px;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.seccion-oradores .columna {
+    width: 300px;
+    padding: 20px;
+    border: 0.2px solid rgb(194, 194, 194);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+.seccion-oradores .columna:hover {
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+.titulo-articulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.badges-contenedor{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+/*seccion oscura*/
+.contenedor-oscuro {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 600px;
+}
+.primero{
+    width: 100%;
+    height: 500px;
+    background-image: url(/imagenes_integrador_front/honolulu.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.segundo {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(37, 37, 37);
+}
+.informacion {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    direction: ltr;
+    padding-left: 10px;
+}
+/**seccion formulario*/
+.seccion-formulario{
+    height: 500px;
+}
+.texto-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.contenedor-formulario {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor-formulario .row-formulario {
+    padding-bottom: 20px;
+}
+.contenedor-formulario p {
+    font-size: small;
+    color: gray;
+}
+/*footer*/
+.contenedor-pie {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*estulos generales*/
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff86;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.1s ease;
+}
+.link-conferencia {
+    color: white;
+    font-weight: bold;
+}
+.link-ticket {
+    color: green;
+}
+.contenedor-cabecera-derecha a:hover {
+    font-size: 20px;
+}
+.contenedor-cabecera-derecha .link-ticket:hover {
+    color: rgb(133, 246, 33);
+}
+.btn-enviar {
+    background-color: rgb(134, 203, 6);
+    border: chartreuse;
+}
+footer {
+    background-color: rgb(12, 58, 77);
+}
+
+/*responsive*/
+@media(max-width: 1144px) {
+    .contenedor-cabecera-derecha li a {
+        font-size: 12px;
+        text-align: center;
+    }
+    .contenedor-cabecera-izquierda p {
+        text-align: inherit;
+        font-size: medium;
+    }
+    
+}
+
+@media(max-width: 996px) {
+    .contenedor-cabecera{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-cabecera-derecha li a {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+}
+@media(max-width: 600px) {
+    .contenedor-oscuro {
+        flex-direction: column;
+    }
+    
+}
